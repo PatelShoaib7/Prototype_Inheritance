@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <a href="/index.html">Hindi Function</a>
+  <a href="/Auto_Inheritance.html">Auto_Inheritance</a>
+</body>
+</html>
+<script>
+
+let arr1= new Array("a","b","c");
+console.log(arr1)
+
+
+function Own_Js_Function(){
+                
+    
+    this.length = arguments.length;
+                Object.defineProperty(this,"length",{
+                value:0,          
+                Writable:true,    
+                enumerable:false,  
+  })
+                for(let  i=0; i<arguments.length; i++)
+                {
+                    this[i]=arguments[i]
+                }
+                this.length = arguments.length;
+
+}
+
+
+Own_Js_Function.prototype.push = function(value)
+{
+            let index = this.length;
+            this[index] = value;
+            this.length++;
+}
+
+Own_Js_Function.prototype.pop=function()
+{
+            let index  = this.length-1;
+            delete this[index]
+            this.length--;
+}
+
+Own_Js_Function.prototype.top=function(value)
+{
+    
+  let index = this.length-1;
+  console.log(this[index])
+
+}
+Own_Js_Function.prototype.print = function()
+{
+    let bag="";
+  for(var i=0; i<this.length; i++)
+  {
+     bag+=arr[i]+" "
+  }
+  console.log(bag)
+}
+Own_Js_Function.prototype.print_index=function()
+{
+   let index=this.length;
+
+   for( var i=0; i<index; i++)
+   {
+       console.log(i)
+   }
+}
+Own_Js_Function.prototype.print_reverse=function()
+{
+    let index=this.length-1;
+    let bag=[];
+    for(var i=index; i>=0; i--)
+    {
+        bag.push(arr[i])
+    }
+ console.log(bag)
+
+}
+Own_Js_Function.prototype.last=function()
+{
+
+    let index=this.length-1;
+    console.log(arr[index])
+}
+Own_Js_Function.prototype.size=function()
+{
+
+    console.log(arr.length)
+}
+let arr = new Own_Js_Function("a","b","c","d","e","f");
+ arr.push('s');
+ arr.pop();
+ arr.push("j");
+ arr.top();
+ arr.top();
+ arr.print();
+ arr.print_index();
+ arr.print_reverse();
+ arr.last();
+ arr.size();
+
+ console.log(Object.values(arr))
+
+
+
+
+
+
+</script>

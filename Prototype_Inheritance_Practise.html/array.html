@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Problem</h1>
+    
+</body>
+</html>
+<script>
+
+
+let arr1= new Array("a","b","c");
+
+console.log(arr1);
+
+
+
+function Abrakadabra()
+{
+    this.length = arguments.length;
+
+  Object.defineProperty(this,"length",{
+      value:0,          
+      Writable:true,    
+      enumerable:false, 
+   
+
+  })
+
+
+    for(let  i=0; i<arguments.length; i++)
+    {
+        this[i]=arguments[i]
+    }
+    this.length = arguments.length;
+
+}
+
+
+Abrakadabra.prototype.push = function(value)
+{
+    let index = this.length;
+    this[index] = value;
+    this.length++;
+}
+
+Abrakadabra.prototype.pop=function()
+{
+    let index  = this.length-1;
+    delete this[index]
+    this.length--;
+}
+
+let arr = new Abrakadabra("a","b","c");
+
+//printing the reverse values of the array
+ function rev()
+ {
+ for(var i=arr.length-1; i>=0; i--)
+ {
+     console.log(arr[i])
+ }
+}
+rev();
+
+//printing the first elemnt of array
+console.log(Object.values(arr[0]))
+
+
+//pushing and pop of the elemne fron the array 
+ arr.push('d')
+ arr.pop();
+ arr.push("z")
+
+
+ console.log(Object.values(arr))
+
+
+
+
+</script>

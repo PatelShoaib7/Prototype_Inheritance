@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/custom_own_metods.html">to custom aray in </a>
+    <a href="/Auto_Inheritance.html">Auto_Inheritance</a>
+</body>
+</html>
+<script>
+
+let arr1= new Array("a","b","c");
+console.log(arr1)
+function Own_Js_Function(){
+    this.length = arguments.length;
+                Object.defineProperty(this,"length",{
+                value:0,          
+                Writable:true,    
+                enumerable:false,  
+  })
+             for(let  i=0; i<arguments.length; i++)
+                {
+                    this[i]=arguments[i]
+                }
+                this.length = arguments.length;
+}
+Own_Js_Function.prototype.पुश = function(value)
+{
+            let index = this.length;
+            this[index] = value;
+            this.length++;
+}
+Own_Js_Function.prototype.पॉप=function()
+{
+            let index  = this.length-1;
+            delete this[index]
+            this.length--;
+}
+Own_Js_Function.prototype.टॉप=function(value)
+{
+  let index = this.length-1;
+  console.log(this[index])
+}
+Own_Js_Function.prototype.प्रिंट = function()
+{
+    let bag="";
+  for(var i=0; i<this.length; i++)
+  {
+     bag+=arr[i]+" "
+  }
+  console.log(bag)
+}
+Own_Js_Function.prototype.प्रिंट_इंडेक्स=function()
+{
+   let index=this.length;
+   for( var i=0; i<index; i++)
+   {
+       console.log(i)
+   }
+}
+Own_Js_Function.prototype.प्रिंट_reverse=function()
+{
+    let index=this.length-1;
+    let bag=[];
+    for(var i=index; i>=0; i--)
+    {
+        bag.push(arr[i])
+    }
+ console.log(bag)
+}
+Own_Js_Function.prototype.लास्ट=function()
+{
+    let index=this.length-1;
+    console.log(arr[index])
+}
+Own_Js_Function.prototype.साईज=function()
+{
+    console.log(arr.length)
+}
+let arr = new Own_Js_Function("a","b","c","d","e","f");
+ arr.पुश('s');
+ arr.पॉप();
+ arr.पुश("j");
+ arr.टॉप();
+ arr.टॉप();
+ arr.प्रिंट();
+ arr.प्रिंट_इंडेक्स();
+ arr.प्रिंट_reverse();
+ arr.लास्ट();
+ arr.साईज();
+ arr.पुश("kjhgfdoiuytojhgf")
+
+ console.log(Object.values(arr))
+
+
+
+
+
+
+</script>

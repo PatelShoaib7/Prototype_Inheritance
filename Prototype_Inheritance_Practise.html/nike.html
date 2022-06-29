@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipcart Products Catalogue</title>
+
+</head>
+<body>
+      <h1>  flipcart products  </h1> 
+</body>
+</html>
+<script>
+
+// let nike={
+//     name:"nike",
+//     price:2000,
+//     type:"sneakers",
+//    color:"black",
+//    weight: "500gm",
+//    material:"Lether"
+
+// }
+
+// let nike2 = Object.create(nike)
+// nike2.name="sports";
+// nike2.price=1000;
+// console.log(nike2)
+
+
+// let nike3 = Object.create(nike)
+// nike3.name="lofer";
+// nike3.price=1400;
+// console.log(nike3)
+
+
+// let nike4 = Object.create(nike)
+// nike4.name="office";
+// nike4.price=1100;
+// console.log(nike4)
+
+
+// let grandfather={
+//     eyes:"blue",
+
+// }
+
+// let father=Object.create(grandfather);
+// // father.eyes="yellow"
+
+// let son= Object.create(father)
+
+
+// console.log(son.eyes)
+
+        // let arr1= new Array("a","b","c");
+
+        // console.log(arr1);
+
+      
+
+        // function Abrakadabra()
+        // {
+        //     this.length = arguments.length;
+
+        //   Object.defineProperty(this,"length",{
+        //       value:0,           // start length from better than undefined
+        //       Writable:true,     //important! can be chaged
+        //       enumerable:false,  //uncoutable
+            //   configurable:true,
+            //above information only used for the detrminig the length 
+           // makr sure the length is folowing some rules to define it 
+
+        //   })
+
+
+        //     for(let  i=0; i<arguments.length; i++)
+        //     {
+        //         this[i]=arguments[i]
+        //     }
+        //     this.length = arguments.length;
+
+        // }
+
+
+        // Abrakadabra.prototype.push = function(value)
+        // {
+        //     let index = this.length;
+        //     this[index] = value;
+        //     this.length++;
+        // }
+     
+        // Abrakadabra.prototype.pop=function()
+        // {
+        //     let index  = this.length-1;
+        //     delete this[index]
+        //     this.length--;
+        // }
+     
+        // let arr = new Abrakadabra("a","b","c");
+
+        //  arr.push('d')
+        //  arr.pop();
+        //  arr.push("z")
+        //  arr.pop();
+        //  console.log(Object.values(arr))
+       
+       
+       
+        let a1 = new Array("x","y","z")
+
+        
+        console.log(a1)
+        function array(c,b,a)
+        {
+         
+         
+         
+            Object.defineProperty(this,"length",{
+              value :0,
+              writable:true,
+              enumerable:false,
+          })
+                    this.length=arguments.length;
+
+
+
+
+
+            for(var i=0; i<arguments.length; i++)
+            {
+                this[i] = arguments[i];
+            }
+        }
+       let result = new  array("x","y","z")
+    //    console.log(result)
+    // console.log(Object.values(result))
+
+ array.prototype.पुश_इन=function(value)
+ {
+     let index=this.length+1;
+     this[index]=value;
+     this.length++;
+ }
+ array.prototype.साइज_कम_करो =function()
+ {
+  let index = this.length;
+  delete this[index]
+  this.length--;
+ }
+
+
+
+ 
+ result.पुश_इन("shoaib")
+ console.log(Object.values(result))
+
+ result.पुश_इन("bhai")
+ console.log(Object.values(result))
+
+ result.पुश_इन("lkjhgfd")
+ console.log(Object.values(result))
+
+ result.साइज_कम_करो ()
+ console.log(Object.values(result))
+  
+    
+
+
+
+
+
+
+
+
+
+
+</script>
+
